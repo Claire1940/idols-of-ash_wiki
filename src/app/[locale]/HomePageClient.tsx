@@ -8,19 +8,29 @@ import {
   ArrowRight,
   BookMarked,
   BookOpen,
+  Bug,
   Check,
   ChevronDown,
+  Download,
   ExternalLink,
   EyeOff,
+  FileText,
   Flame,
   Gamepad2,
   GitBranch,
+  Globe,
+  Lightbulb,
   Lock,
   Map,
   MessageCircle,
+  Monitor,
   Moon,
+  ShoppingBag,
+  Skull,
   Sparkles,
   Trophy,
+  Volume2,
+  Wind,
   Zap,
 } from 'lucide-react'
 import Link from 'next/link'
@@ -302,7 +312,8 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
               // 映射卡片索引到 section ID
               const sectionIds = [
                 'download', 'beginner-guide', 'controls', 'first-kiln',
-                'nightmare-mode-guide', 'walkthrough', 'endings', 'grappling-hook-guide'
+                'nightmare-mode-guide', 'walkthrough', 'endings', 'grappling-hook-guide',
+                'centipede-guide', 'black-screen-fix', 'steam-release', 'play-online'
               ]
               const sectionId = sectionIds[index]
 
@@ -738,6 +749,203 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Module 9: Centipede Guide */}
+      <section id="centipede-guide" className="scroll-mt-24 px-4 py-20">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.centipede.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['centipede']} locale={locale}>
+                {t.modules.centipede.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.centipede.subtitle}</p>
+          </div>
+
+          <p className="text-muted-foreground text-base max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+            {t.modules.centipede.intro}
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 scroll-reveal">
+            {t.modules.centipede.cards.map((card: any, i: number) => {
+              const icons = [Skull, Volume2, Zap, Wind, FileText]
+              const IconComp = icons[i] || Skull
+              return (
+                <div key={i} className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] flex items-center justify-center flex-shrink-0">
+                      <IconComp className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
+                    </div>
+                    <h3 className="text-lg font-bold">{card.title}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{card.body}</p>
+                  <ul className="space-y-1">
+                    {card.bullets.map((bullet: string, j: number) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[hsl(var(--nav-theme-light))] flex-shrink-0" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Module 10: Black Screen Fix */}
+      <section id="black-screen-fix" className="scroll-mt-24 px-4 py-20 bg-white/[0.02]">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.blackScreenFix.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['blackScreenFix']} locale={locale}>
+                {t.modules.blackScreenFix.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.blackScreenFix.subtitle}</p>
+          </div>
+
+          <p className="text-muted-foreground text-base max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+            {t.modules.blackScreenFix.intro}
+          </p>
+
+          <div className="scroll-reveal space-y-3">
+            {t.modules.blackScreenFix.items.map((item: any, i: number) => (
+              <details
+                key={i}
+                className="group border border-border rounded-xl overflow-hidden hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
+              >
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-white/5 transition-colors list-none">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[hsl(var(--nav-theme)/0.15)] flex items-center justify-center flex-shrink-0">
+                      <Monitor className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
+                    </div>
+                    <span className="font-semibold text-sm md:text-base">{item.question}</span>
+                  </div>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0 ml-3 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed border-t border-border pt-4">
+                  {item.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Module 11: Steam Release */}
+      <section id="steam-release" className="scroll-mt-24 px-4 py-20">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.steamRelease.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['steamRelease']} locale={locale}>
+                {t.modules.steamRelease.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.steamRelease.subtitle}</p>
+          </div>
+
+          <p className="text-muted-foreground text-base max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+            {t.modules.steamRelease.intro}
+          </p>
+
+          {/* Desktop table */}
+          <div className="scroll-reveal hidden md:block rounded-xl border border-border overflow-hidden">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-[hsl(var(--nav-theme)/0.1)] border-b border-border">
+                  <th className="text-left px-6 py-4 font-semibold text-[hsl(var(--nav-theme-light))]">Topic</th>
+                  <th className="text-left px-6 py-4 font-semibold text-[hsl(var(--nav-theme-light))]">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {t.modules.steamRelease.items.map((row: any, i: number) => (
+                  <tr key={i} className={`border-b border-border last:border-0 ${i % 2 === 0 ? '' : 'bg-white/[0.02]'}`}>
+                    <td className="px-6 py-4 font-medium">{row.topic}</td>
+                    <td className="px-6 py-4 text-muted-foreground">{row.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Mobile stacked cards */}
+          <div className="md:hidden space-y-3 scroll-reveal">
+            {t.modules.steamRelease.items.map((row: any, i: number) => (
+              <div key={i} className="p-4 bg-white/5 border border-border rounded-xl">
+                <p className="text-xs font-semibold text-[hsl(var(--nav-theme-light))] uppercase tracking-wide mb-1">{row.topic}</p>
+                <p className="text-sm text-muted-foreground">{row.value}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="scroll-reveal mt-8 flex justify-center">
+            <a
+              href="https://idolsofash.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm font-medium hover:bg-[hsl(var(--nav-theme)/0.2)] transition-colors"
+            >
+              <ShoppingBag className="w-4 h-4" /> Visit Official Site
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Module 12: Play Online */}
+      <section id="play-online" className="scroll-mt-24 px-4 py-20 bg-white/[0.02]">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.playOnline.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['playOnline']} locale={locale}>
+                {t.modules.playOnline.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.playOnline.subtitle}</p>
+          </div>
+
+          <p className="text-muted-foreground text-base max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+            {t.modules.playOnline.intro}
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 scroll-reveal">
+            {t.modules.playOnline.cards.map((card: any, i: number) => {
+              const icons = [Globe, BookOpen, Download, AlertTriangle, Lightbulb]
+              const IconComp = icons[i] || Globe
+              return (
+                <div key={i} className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] flex items-center justify-center mb-4">
+                    <IconComp className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
+                  </div>
+                  <h3 className="text-base font-bold mb-2">{card.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{card.body}</p>
+                  <ul className="space-y-1">
+                    {card.bullets.map((bullet: string, j: number) => (
+                      <li key={j} className="flex items-start gap-2 text-xs text-muted-foreground">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[hsl(var(--nav-theme-light))] flex-shrink-0" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

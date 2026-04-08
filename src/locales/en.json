@@ -57,7 +57,7 @@
   "tools": {
     "title": "Idols of Ash",
     "titleHighlight": "Guide Hub",
-    "subtitle": "Jump to any section: download, beginner tips, controls, First Kiln, Nightmare Mode, full walkthrough, endings, and grappling hook mastery.",
+    "subtitle": "Jump to any section: download, beginner tips, controls, First Kiln, Nightmare Mode, walkthrough, endings, grappling hook, centipede guide, black screen fix, Steam release, and browser play.",
     "cards": [
       {
         "icon": "Download",
@@ -98,6 +98,26 @@
         "icon": "Anchor",
         "title": "Idols of Ash Grappling Hook",
         "description": "Aim angles, release timing, and deep-run hook mechanics"
+      },
+      {
+        "icon": "Bug",
+        "title": "Idols of Ash Centipede Guide",
+        "description": "Centipede behavior, sound cues, and evasion habits"
+      },
+      {
+        "icon": "Monitor",
+        "title": "Idols of Ash Black Screen Fix",
+        "description": "ANGLE rendering, v1.13 patch notes, and launch fixes"
+      },
+      {
+        "icon": "ShoppingBag",
+        "title": "Idols of Ash Steam Release",
+        "description": "Current itch.io status and upcoming Steam availability"
+      },
+      {
+        "icon": "Globe",
+        "title": "Idols of Ash Play Online",
+        "description": "Browser play portals and official download comparison"
       }
     ]
   },
@@ -381,6 +401,164 @@
           "description": "Version 1.1 adjusted rope swinging at greater depths, especially for First Kiln play. Current runs are built around this updated hook behavior — older guides may not reflect it."
         }
       ]
+    },
+    "centipede": {
+      "eyebrow": "Enemy Guide",
+      "title": "Idols of Ash Centipede Guide",
+      "subtitle": "This page explains the creature's behavior, the sound cues that matter, and the movement habits that keep your descent alive.",
+      "intro": "The Centipede is the game's defining pressure system. It chases in real time, punishes hesitation, and is easiest to read through sound and route discipline rather than constant backward checking.",
+      "cards": [
+        {
+          "icon": "Skull",
+          "title": "What the monster is",
+          "body": "The main threat is a giant multi-segmented centipede that hunts the player through the abyss. Community nicknames include Jerry and Murderpede.",
+          "bullets": [
+            "Traverses walls, ceilings, and support beams",
+            "Acts as the core pressure mechanic for every descent",
+            "Appears across Normal, Nightmare, and First Kiln variants"
+          ]
+        },
+        {
+          "icon": "Volume2",
+          "title": "Audio cues to track",
+          "body": "Sound is the fastest way to judge danger. Chittering, clicking, and scraping sounds are the most important warning signals during a descent.",
+          "bullets": [
+            "Chittering usually means the creature is closing in",
+            "Scraping and clicking help you judge proximity without turning around",
+            "Listening forward is usually safer than staring backward"
+          ]
+        },
+        {
+          "icon": "Zap",
+          "title": "How it actually catches you",
+          "body": "The Centipede does not just trail behind. It follows geometry the player cannot use and can pressure chokepoints before you settle into a safe rhythm.",
+          "bullets": [
+            "Real-time pursuit behavior is emphasized in guide coverage",
+            "Body segments trail behind the head, so space stays dangerous even after it passes",
+            "Contact drains health rapidly, giving only a brief escape window"
+          ]
+        },
+        {
+          "icon": "Wind",
+          "title": "Best evasion habits",
+          "body": "Winning is more about flow than fighting. Players survive by keeping downward momentum, choosing angle-based grapples, and treating pauses as danger.",
+          "bullets": [
+            "Keep moving instead of lingering on ledges",
+            "Use angled grapples instead of panic-hooking straight up",
+            "Use slow Ctrl descents only when the drop is truly blind"
+          ]
+        },
+        {
+          "icon": "FileText",
+          "title": "Patch behavior to know",
+          "body": "The official v1.11 hotfix specifically addressed a monster behavior issue and restored the intended pressure of the chase.",
+          "bullets": [
+            "Hotfix note: the previous update made the monster too shy",
+            "v1.11 restored intended pursuit behavior",
+            "Post-hotfix runs feel less forgiving when you stall"
+          ]
+        }
+      ]
+    },
+    "blackScreenFix": {
+      "eyebrow": "Tech Support",
+      "title": "Idols of Ash Black Screen Fix",
+      "subtitle": "This module brings the official fixes together so players can get back into the descent without digging through multiple posts.",
+      "intro": "Idols of Ash received rapid early hotfixes. The most important fixes cover Windows rendering compatibility, control settings, and common install mistakes caused by grabbing the wrong build or launcher path.",
+      "items": [
+        {
+          "question": "What should I try first if the Idols of Ash game launches to a black screen?",
+          "answer": "Update to version 1.13 first. The official patch adds ANGLE rendering support for Windows, and the install guide specifically points players to ANGLE mode if the screen stays black after the brightness prompt."
+        },
+        {
+          "question": "Which Idols of Ash patch addressed graphics-driver compatibility issues?",
+          "answer": "Version 1.13 is the key patch. The official devlog says it affects Windows users and adds ANGLE rendering mode to help resolve crashes or black screens caused by graphics-driver compatibility."
+        },
+        {
+          "question": "Did Idols of Ash add sensitivity options?",
+          "answer": "Yes. Version 1.12 added mouse sensitivity, gamepad sensitivity, and an Invert Y option. The same patch also fixed monster bio-luminosity not applying correctly."
+        },
+        {
+          "question": "What if itch says there are no compatible files or Idols of Ash will not start?",
+          "answer": "Use the correct archive for your platform. The official install page lists a Windows zip and a Linux tar.xz, and it also says to download directly in a normal browser if the itch desktop app reports no compatible files."
+        },
+        {
+          "question": "Where should Idols of Ash players check for the latest official fixes?",
+          "answer": "Start with the official itch.io page and the official devlog entries. The install guide also mirrors the current file names and summarizes the most common launch and rendering issues."
+        }
+      ]
+    },
+    "steamRelease": {
+      "eyebrow": "Release Tracker",
+      "title": "Idols of Ash Steam Release",
+      "subtitle": "Players are mostly asking one simple question: where can I get Idols of Ash right now, and what does Steam soon actually mean?",
+      "intro": "Right now, Idols of Ash is already live as a downloadable release on itch.io, while the official site keeps the Steam messaging short and simple: the game is coming to Steam soon.",
+      "items": [
+        { "topic": "Current live store", "value": "itch.io" },
+        { "topic": "Current release status", "value": "Released" },
+        { "topic": "Download platforms available now", "value": "Windows and Linux" },
+        { "topic": "Current pricing model", "value": "$3.00 USD or more, currently shown with a 100% off launch sale on itch.io" },
+        { "topic": "Official Steam wording", "value": "Coming to Steam soon" },
+        { "topic": "What Steam soon means right now", "value": "The official site confirms future Steam availability, while the playable release currently points users to itch.io" }
+      ]
+    },
+    "playOnline": {
+      "eyebrow": "Browser Play",
+      "title": "Idols of Ash Play Online",
+      "subtitle": "This page helps users understand which browser options exist, how they launch, and how they differ from the official downloadable version.",
+      "intro": "Idols of Ash now appears in browser-play portals as well as the official itch.io download flow. Browser play focuses on instant access, while the official release remains the main source for Windows and Linux builds.",
+      "cards": [
+        {
+          "icon": "Globe",
+          "title": "Browser portal on idolsofash.io",
+          "body": "This site lets players launch Idols of Ash in a browser with no installation flow.",
+          "bullets": [
+            "Click Play Now from the portal",
+            "Enable hardware acceleration for better performance",
+            "WebGL assets usually load in about 5 to 10 seconds"
+          ]
+        },
+        {
+          "icon": "BookOpen",
+          "title": "Browser portal on idolsofash.wiki",
+          "body": "The wiki also offers a browser-play route and pairs it with guide content for Idols of Ash.",
+          "bullets": [
+            "Promotes no-download play",
+            "Recommends hardware acceleration",
+            "Suggests F11 for the best fullscreen experience"
+          ]
+        },
+        {
+          "icon": "Download",
+          "title": "Official downloadable build",
+          "body": "The official install path for Idols of Ash is the itch.io release maintained by Leafy Games.",
+          "bullets": [
+            "Current official builds are Windows zip and Linux tar.xz",
+            "Latest file names listed are v1.13 builds",
+            "Pay-what-you-want model, often free during launch sales"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Platform limits to know",
+          "body": "The official install guide is clear about supported downloadable platforms for Idols of Ash.",
+          "bullets": [
+            "No official Android build",
+            "No official iOS build",
+            "Windows and Linux are the supported download platforms"
+          ]
+        },
+        {
+          "icon": "Lightbulb",
+          "title": "Who browser play is best for",
+          "body": "Browser access to Idols of Ash is most useful for instant first-time testing, viral clip traffic, and low-friction sharing.",
+          "bullets": [
+            "Fast try-now entry point",
+            "No extraction or local install steps",
+            "Useful for checking controls and early feel before downloading"
+          ]
+        }
+      ]
     }
   },
   "faq": {
@@ -389,28 +567,28 @@
     "subtitle": "Everything you need to know about Idols of Ash",
     "questions": [
       {
-        "question": "Is Idols of Ash a singleplayer game?",
-        "answer": "Yes. Idols of Ash is a singleplayer-only game with no multiplayer or co-op planned."
+        "question": "Is Idols of Ash free to play?",
+        "answer": "Idols of Ash is pay-what-you-want on itch.io with a $0 minimum, so you can download it for free. A Steam release is confirmed as coming soon."
       },
       {
-        "question": "What is the Apotheosis system in Idols of Ash?",
-        "answer": "Apotheosis is Idols of Ash' freeform fusion crafting system. Instead of following fixed recipes, you combine materials and discover your own crafting paths."
+        "question": "What platforms does Idols of Ash support?",
+        "answer": "Idols of Ash supports Windows and Linux via the official itch.io page. The official site confirms a Steam release is coming soon. There are no official Android or iOS builds."
       },
       {
-        "question": "Where can I play Idols of Ash?",
-        "answer": "Idols of Ash is currently available on Steam for Windows. Linux and Steam Deck support is available through Proton 9.0."
+        "question": "How do I fix the black screen in Idols of Ash?",
+        "answer": "Update to version 1.13, which adds ANGLE rendering support for Windows. If the screen stays black after the brightness prompt, switch to ANGLE mode in the launch options. You can also try the --rendering-driver d3d12 launch flag."
       },
       {
-        "question": "How much does Idols of Ash cost?",
-        "answer": "Idols of Ash costs $9.99 on Steam."
+        "question": "Does Idols of Ash have multiple endings?",
+        "answer": "Yes. Idols of Ash has distinct endings for Normal mode, Nightmare mode, and First Kiln. Each path requires different conditions to reach and offers a different conclusion to the descent."
+      },
+      {
+        "question": "What is the Centipede in Idols of Ash?",
+        "answer": "The Centipede is the main antagonist of Idols of Ash — a giant multi-segmented creature that hunts you in real time as you descend. It traverses walls, ceilings, and support beams, and sound cues like chittering and scraping are your best warning system."
       },
       {
         "question": "Does Idols of Ash support controllers?",
-        "answer": "Yes, but controller play is not recommended because the menus are not designed around it. Keyboard and mouse is the smoother option."
-      },
-      {
-        "question": "Will Idols of Ash receive updates?",
-        "answer": "Yes. Some content updates are planned after release, but they are not intended to continue on an indefinite regular schedule."
+        "answer": "Yes. Idols of Ash added gamepad sensitivity and an Invert Y option in version 1.12. Keyboard and mouse is generally recommended for the most responsive controls, but controller play is fully supported."
       }
     ]
   },
