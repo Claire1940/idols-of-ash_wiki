@@ -57,7 +57,7 @@
   "tools": {
     "title": "Idols of Ash",
     "titleHighlight": "Guide Hub",
-    "subtitle": "Jump to any section: download info, beginner tips, full controls reference, and the First Kiln endgame guide.",
+    "subtitle": "Jump to any section: download, beginner tips, controls, First Kiln, Nightmare Mode, full walkthrough, endings, and grappling hook mastery.",
     "cards": [
       {
         "icon": "Download",
@@ -78,6 +78,26 @@
         "icon": "Flame",
         "title": "Idols of Ash First Kiln",
         "description": "Ember routes, multi-centipede pressure, and endgame strategy"
+      },
+      {
+        "icon": "Moon",
+        "title": "Idols of Ash Nightmare Mode",
+        "description": "Darker runs, faster centipede, and stricter movement discipline"
+      },
+      {
+        "icon": "Map",
+        "title": "Idols of Ash Walkthrough",
+        "description": "Complete descent route from opening swing to final race"
+      },
+      {
+        "icon": "BookMarked",
+        "title": "Idols of Ash Endings",
+        "description": "Normal, Nightmare, and First Kiln ending paths compared"
+      },
+      {
+        "icon": "Anchor",
+        "title": "Idols of Ash Grappling Hook",
+        "description": "Aim angles, release timing, and deep-run hook mechanics"
       }
     ]
   },
@@ -235,6 +255,130 @@
         {
           "title": "Why the Latest Build Helps",
           "content": "Version 1.1 adjusted rope swinging at greater depths specifically to help with deeper First Kiln sections. If you are practicing the mode seriously, use the newest public build from the official itch.io page."
+        }
+      ]
+    },
+    "nightmareModeGuide": {
+      "title": "Idols of Ash Nightmare Mode Guide",
+      "eyebrow": "Advanced Mode",
+      "intro": "Nightmare Mode unlocks after a Normal clear. The bottom is still the goal, but the run becomes darker, faster, and far less forgiving — demanding route memory, cleaner grapples, and much stronger movement discipline.",
+      "items": [
+        {
+          "title": "Unlock Requirement",
+          "text": "Finish Normal Mode once to unlock Nightmare Mode."
+        },
+        {
+          "title": "Enemy Pressure",
+          "text": "Nightmare uses a faster, more aggressive centipede. The Version 1.11 hotfix specifically restored stronger monster pressure after an update made it too passive."
+        },
+        {
+          "title": "Reduced Visibility",
+          "text": "The environment is significantly darker than Normal, so clean recognition of anchor points and landing lines matters much more."
+        },
+        {
+          "title": "Movement Discipline",
+          "text": "Slow Ctrl descents are much less practical here. Nightmare is built around committed free-falls, quick swings, and fast releases instead of careful hanging."
+        },
+        {
+          "title": "Core Survival Rule",
+          "text": "Do not stop on ledges unless absolutely necessary. Nightmare punishes hesitation much earlier than a first Normal clear."
+        },
+        {
+          "title": "Next Unlock",
+          "text": "Clearing Nightmare Mode unlocks First Kiln — the game's final challenge mode featuring ember collection and up to four centipedes."
+        }
+      ]
+    },
+    "walkthrough": {
+      "title": "Idols of Ash Walkthrough",
+      "eyebrow": "Route Guide",
+      "intro": "A first clear is less about combat skill and more about staying in motion, preserving your line, and refusing to panic when the abyss opens up. The cleanest route keeps your swing rhythm intact and avoids long pauses.",
+      "steps": [
+        {
+          "title": "Move through the opening fast",
+          "description": "Treat the opening stretch as setup, not safety. The game teaches basic descent here, but strong runs start by building pace early instead of lingering."
+        },
+        {
+          "title": "Use angled swings to build the run",
+          "description": "Anchor to beams, rocks, and outcroppings, then release around a 45-degree arc to turn vertical speed into forward movement. This is the baseline route logic for the whole descent."
+        },
+        {
+          "title": "Save rappelling for blind drops only",
+          "description": "Ctrl descent is the emergency tool, not the default route. Use it when a drop is unreadable, then return to falling and swinging as soon as the landing line is clear."
+        },
+        {
+          "title": "Push through the gate and aqueduct cleanly",
+          "description": "The tower-gate section and aqueduct are memorable landmarks. The aqueduct gives progress, but hook footholds are tighter there and punish messy aim."
+        },
+        {
+          "title": "Use sound to survive mid-run choke points",
+          "description": "Track the centipede with audio instead of turning around. Looking back breaks flow, wastes time, and often causes missed anchors right when the route narrows."
+        },
+        {
+          "title": "Commit to the final race to the bottom",
+          "description": "Late in the run, momentum is the best recovery tool. Small mistakes can still be saved, but stopping on ledges usually gives the centipede the window it needs."
+        }
+      ]
+    },
+    "endings": {
+      "title": "Idols of Ash Endings",
+      "eyebrow": "Ending Paths",
+      "intro": "Idols of Ash centers its finish states around three clear completion paths. The game escalates through Normal, Nightmare, and First Kiln — each changing the pressure before the ending rather than replacing the core identity of the game.",
+      "items": [
+        {
+          "question": "How many endings does Idols of Ash have?",
+          "answer": "Three endings are documented in full-run videos: a Normal ending, a Nightmare ending, and a First Kiln ending — each reached by completing the corresponding mode."
+        },
+        {
+          "question": "What is the Idols of Ash ending unlock order?",
+          "answer": "Complete Normal Mode to unlock Nightmare Mode, then complete Nightmare Mode to unlock First Kiln. The endings follow this same progression order."
+        },
+        {
+          "question": "What changes before the Idols of Ash Nightmare ending?",
+          "answer": "Nightmare keeps the same bottom-reaching objective as Normal, but makes the run darker and far more aggressive — so reaching the ending requires a much harsher execution test."
+        },
+        {
+          "question": "What makes the Idols of Ash First Kiln ending different?",
+          "answer": "First Kiln is a secret challenge map with ember collection and up to four centipedes at once. Its ending path is built around a different level structure and a much higher mechanical ceiling."
+        },
+        {
+          "question": "Which Idols of Ash ending should players aim for first?",
+          "answer": "The practical progression is Normal first, Nightmare second, and First Kiln last. That order matches both the unlock chain and the way the game teaches mastery across all three routes."
+        }
+      ]
+    },
+    "grapplingHookGuide": {
+      "title": "Idols of Ash Grappling Hook Guide",
+      "eyebrow": "Core Mechanic",
+      "intro": "The hook is the whole game. Once the rope starts making sense, the descent stops feeling random and starts feeling readable. Aim with the mouse and hold Left Click to fire — the hard part is angle choice and release timing.",
+      "steps": [
+        {
+          "title": "Keep your eyes on the anchor",
+          "description": "The grapple works best when you are actively looking at the anchor point. Looking away while tethered destabilizes the rope and makes falls much more likely."
+        },
+        {
+          "title": "Fire at an angle, not straight above",
+          "description": "Straight-up panic grapples are the main cause of whiplash damage. A diagonal anchor creates a real swing arc and gives the rope space to convert speed safely."
+        },
+        {
+          "title": "Release around the 45-degree point",
+          "description": "The cleanest distance comes from releasing near a 45-degree swing angle. That timing turns downward speed into useful forward momentum."
+        },
+        {
+          "title": "Use Ctrl descent as a rescue tool only",
+          "description": "Controlled descent is best for blind drops and emergency corrections. Relying on it too often kills your pace and leaves you exposed to the centipede."
+        },
+        {
+          "title": "Compensate for wind wobble at depth",
+          "description": "Long falls make aim drift. Fire the hook at closer targets when the reticle starts wobbling instead of forcing a long, desperate tether."
+        },
+        {
+          "title": "Use quick visual snaps, not long looks",
+          "description": "A strong hook rhythm is: scan, aim, fire, confirm the tether, then flick up briefly to check the centipede before returning to the rope line."
+        },
+        {
+          "title": "Account for the Version 1.1 rope patch",
+          "description": "Version 1.1 adjusted rope swinging at greater depths, especially for First Kiln play. Current runs are built around this updated hook behavior — older guides may not reflect it."
         }
       ]
     }

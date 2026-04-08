@@ -2,16 +2,26 @@
 
 import { useEffect, useState, Suspense, lazy } from 'react'
 import {
+  Activity,
   AlertTriangle,
+  Anchor,
   ArrowRight,
+  BookMarked,
   BookOpen,
   Check,
   ChevronDown,
   ExternalLink,
+  EyeOff,
   Flame,
   Gamepad2,
+  GitBranch,
+  Lock,
+  Map,
   MessageCircle,
+  Moon,
   Sparkles,
+  Trophy,
+  Zap,
 } from 'lucide-react'
 import Link from 'next/link'
 import { useMessages } from 'next-intl'
@@ -291,7 +301,8 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
             {t.tools.cards.map((card: any, index: number) => {
               // 映射卡片索引到 section ID
               const sectionIds = [
-                'download', 'beginner-guide', 'controls', 'first-kiln'
+                'download', 'beginner-guide', 'controls', 'first-kiln',
+                'nightmare-mode-guide', 'walkthrough', 'endings', 'grappling-hook-guide'
               ]
               const sectionId = sectionIds[index]
 
@@ -545,6 +556,192 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
           </div>
         </div>
       </section>
+      {/* Module 5: Nightmare Mode Guide */}
+      <section id="nightmare-mode-guide" className="scroll-mt-24 px-4 py-20">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.nightmareModeGuide.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['nightmareModeGuide']} locale={locale}>
+                {t.modules.nightmareModeGuide.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.nightmareModeGuide.intro}</p>
+          </div>
+
+          {/* Cards Grid */}
+          {(() => {
+            const cardIcons = [Lock, Zap, EyeOff, Activity, AlertTriangle, Trophy]
+            return (
+              <div className="scroll-reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {t.modules.nightmareModeGuide.items.map((item: any, index: number) => {
+                  const Icon = cardIcons[index % cardIcons.length]
+                  return (
+                    <div
+                      key={index}
+                      className="p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] hover:shadow-lg hover:shadow-[hsl(var(--nav-theme)/0.08)] transition-all duration-300"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-[hsl(var(--nav-theme)/0.12)] flex items-center justify-center mb-4">
+                        <Icon className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
+                      </div>
+                      <h3 className="font-bold text-base mb-2">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            )
+          })()}
+        </div>
+      </section>
+
+      {/* 广告位: 标准横幅 728×90 */}
+      <AdBanner type="banner-728x90" adKey={process.env.NEXT_PUBLIC_AD_BANNER_728X90} />
+
+      {/* Module 6: Walkthrough */}
+      <section id="walkthrough" className="scroll-mt-24 px-4 py-20 bg-white/[0.02]">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.walkthrough.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['walkthrough']} locale={locale}>
+                {t.modules.walkthrough.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.walkthrough.intro}</p>
+          </div>
+
+          {/* Steps */}
+          <div className="scroll-reveal relative">
+            {/* Vertical connector line */}
+            <div className="hidden md:block absolute left-6 top-6 bottom-6 w-0.5 bg-[hsl(var(--nav-theme)/0.2)]" />
+            <div className="space-y-4">
+              {t.modules.walkthrough.steps.map((step: any, index: number) => (
+                <div key={index} className="flex gap-5 p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[hsl(var(--nav-theme)/0.2)] border-2 border-[hsl(var(--nav-theme)/0.5)] flex items-center justify-center z-10">
+                    <span className="text-xl font-bold text-[hsl(var(--nav-theme-light))]">{index + 1}</span>
+                  </div>
+                  <div className="pt-1">
+                    <h3 className="text-lg font-bold mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation tip */}
+          <div className="scroll-reveal mt-8 flex items-start gap-3 p-4 bg-[hsl(var(--nav-theme)/0.05)] border border-[hsl(var(--nav-theme)/0.3)] rounded-xl">
+            <Map className="w-5 h-5 text-[hsl(var(--nav-theme-light))] flex-shrink-0 mt-0.5" />
+            <p className="text-sm text-muted-foreground">Follow each step in sequence for the cleanest first-clear route. Nightmare-ready players should focus on steps 2 and 6 — momentum is the most transferable skill.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Module 7: Endings */}
+      <section id="endings" className="scroll-mt-24 px-4 py-20">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.endings.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['endings']} locale={locale}>
+                {t.modules.endings.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.endings.intro}</p>
+          </div>
+
+          {/* Accordion using details/summary */}
+          <div className="scroll-reveal space-y-3 mb-10">
+            {t.modules.endings.items.map((item: any, index: number) => (
+              <details
+                key={index}
+                className="group border border-border rounded-xl overflow-hidden hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
+              >
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-white/5 transition-colors list-none">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[hsl(var(--nav-theme)/0.15)] flex items-center justify-center flex-shrink-0">
+                      <GitBranch className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
+                    </div>
+                    <span className="font-semibold text-sm md:text-base">{item.question}</span>
+                  </div>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0 ml-3 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed border-t border-border pt-4">
+                  {item.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+
+          {/* Endings progression note */}
+          <div className="scroll-reveal p-5 bg-[hsl(var(--nav-theme)/0.05)] border border-[hsl(var(--nav-theme)/0.3)] rounded-xl flex items-start gap-3">
+            <BookMarked className="w-5 h-5 text-[hsl(var(--nav-theme-light))] flex-shrink-0 mt-0.5" />
+            <p className="text-sm text-muted-foreground">All three endings share the descent-to-bottom objective. The difference is execution difficulty and level structure — not alternative narrative paths.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 广告位: 方形广告 300×250 */}
+      <AdBanner type="banner-300x250" adKey={process.env.NEXT_PUBLIC_AD_BANNER_300X250} />
+
+      {/* Module 8: Grappling Hook Guide */}
+      <section id="grappling-hook-guide" className="scroll-mt-24 px-4 py-20 bg-white/[0.02]">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.grapplingHookGuide.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['grapplingHookGuide']} locale={locale}>
+                {t.modules.grapplingHookGuide.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.grapplingHookGuide.intro}</p>
+          </div>
+
+          {/* Steps */}
+          <div className="scroll-reveal space-y-4 mb-10">
+            {t.modules.grapplingHookGuide.steps.map((step: any, index: number) => (
+              <div key={index} className="flex gap-4 p-6 bg-white/5 border border-border rounded-xl hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[hsl(var(--nav-theme)/0.2)] border-2 border-[hsl(var(--nav-theme)/0.5)] flex items-center justify-center">
+                  <span className="text-xl font-bold text-[hsl(var(--nav-theme-light))]">{index + 1}</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Hook tip callout */}
+          <div className="scroll-reveal p-6 bg-[hsl(var(--nav-theme)/0.08)] border border-[hsl(var(--nav-theme)/0.3)] rounded-xl">
+            <div className="flex items-start gap-3">
+              <Anchor className="w-5 h-5 text-[hsl(var(--nav-theme-light))] flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-bold mb-2">Practice the 45-degree release on Normal first</h3>
+                <p className="text-sm text-muted-foreground mb-3">The hook timing is identical across all modes. Locking in the release angle on Normal builds the muscle memory you need before Nightmare and First Kiln raise the pressure.</p>
+                <a
+                  href="https://leafygames.itch.io/idols-of-ash"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm hover:bg-[hsl(var(--nav-theme)/0.2)] transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" /> Download on itch.io
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <Suspense fallback={<LoadingPlaceholder />}>
         <FAQSection
