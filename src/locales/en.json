@@ -1,13 +1,13 @@
 {
   "seo": {
     "home": {
-      "title": "Lucid Blocks Wiki - Crafting, Biomes & Achievements",
-      "description": "Lucid Blocks Wiki covers crafting, biomes, creatures, items, achievements, endings, and survival tips for the surreal voxel sandbox adventure on Steam.",
-      "keywords": "Lucid Blocks, Lucid Blocks wiki, crafting, biomes, achievements, survival, Steam",
-      "ogTitle": "Lucid Blocks Wiki - Crafting, Biomes & Achievements",
-      "ogDescription": "Lucid Blocks Wiki covers crafting, biomes, creatures, items, achievements, endings, and survival tips for the surreal voxel sandbox adventure on Steam.",
-      "twitterTitle": "Lucid Blocks Wiki - Crafting, Biomes & Achievements",
-      "twitterDescription": "Lucid Blocks Wiki covers crafting, biomes, creatures, items, achievements, and survival tips for the surreal voxel sandbox on Steam."
+      "title": "Idols of Ash - Guide, Ending, Nightmare & First Kiln",
+      "description": "Idols of Ash hub for download info, controls, endings, Nightmare and First Kiln guides, speedrun routes, and the latest fixes for black screen issues.",
+      "keywords": "Idols of Ash, horror climbing game, ending, nightmare, first kiln, guide, walkthrough",
+      "ogTitle": "Idols of Ash - Guide, Ending, Nightmare & First Kiln",
+      "ogDescription": "Idols of Ash hub for download info, controls, endings, Nightmare and First Kiln guides, speedrun routes, and the latest fixes for black screen issues.",
+      "twitterTitle": "Idols of Ash - Guide, Ending, Nightmare & First Kiln",
+      "twitterDescription": "Idols of Ash hub for download info, controls, endings, Nightmare and First Kiln guides, speedrun routes, and fixes for black screen issues."
     }
   },
   "nav": {
@@ -33,27 +33,27 @@
     "readMore": "Read More"
   },
   "hero": {
-    "badge": "Surreal Voxel Survival Sandbox",
-    "title": "Lucid Blocks Wiki",
-    "description": "Explore dreamlike biomes, fuse items with Apotheosis, build freely, and survive strange creatures in this surreal open-world sandbox on Steam.",
-    "getFreeCodesCTA": "Explore Crafting Guide",
-    "playOnSteamCTA": "Play on Steam",
+    "badge": "Free Indie Horror Climbing Game",
+    "title": "Idols of Ash",
+    "description": "Descend through a ruined abyss with a grappling hook while a giant centipede hunts you. Find download info, endings, Nightmare, First Kiln, speedruns, and black screen fixes.",
+    "getFreeCodesCTA": "Download Free",
+    "playOnSteamCTA": "Official Site",
     "stats": {
       "stat1": {
-        "value": "1,325",
-        "label": "Players Online"
+        "value": "4.9/5",
+        "label": "Itch Rating"
       },
       "stat2": {
-        "value": "1,986",
-        "label": "Peak CCU"
+        "value": "215",
+        "label": "User Ratings"
       },
       "stat3": {
-        "value": "97%",
-        "label": "Positive Reviews"
+        "value": "7.4K+",
+        "label": "Trailer Views"
       },
       "stat4": {
-        "value": "Mar 12, 2026",
-        "label": "Release Date"
+        "value": "117 MB",
+        "label": "Windows Download"
       }
     }
   },
@@ -784,26 +784,26 @@
     ]
   },
   "cta": {
-    "title": "Ready to Explore Lucid Blocks?",
-    "description": "Join the Lucid Blocks community on Discord for guides, updates, and discussions!",
-    "joinCommunity": "Join Discord",
-    "joinGame": "Play on Steam"
+    "title": "Ready to Play Idols of Ash?",
+    "description": "Download Idols of Ash free on itch.io and visit the official site for the latest updates!",
+    "joinCommunity": "Download Free on itch.io",
+    "joinGame": "Official Site"
   },
   "footer": {
-    "title": "Lucid Blocks Wiki",
-    "description": "Your complete resource hub for Lucid Blocks crafting, biomes, creatures, achievements, and survival guides.",
+    "title": "Idols of Ash Wiki",
+    "description": "Your complete resource hub for Idols of Ash download, controls, endings, Nightmare, First Kiln, speedruns, and technical fixes.",
     "resources": "Resources",
     "community": "Community",
     "legal": "Legal",
-    "discord": "Discord",
+    "discord": "itch.io Page",
     "twitter": "X / Twitter",
-    "steamCommunity": "Steam Community",
-    "steamStore": "Steam Store",
+    "steamCommunity": "YouTube Channel",
+    "steamStore": "Official Site",
     "about": "About",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "copyrightNotice": "Copyright",
-    "copyright": "© 2026 Lucid Blocks Wiki. Not affiliated with the developers of Lucid Blocks.",
+    "copyright": "© 2026 Idols of Ash Wiki. Not affiliated with Leafy Games.",
     "disclaimer": "Unofficial fan-made resource website."
   },
   "pages": {

@@ -9,15 +9,15 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.lucidblocks.wiki'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.idols-of-ash.wiki'
   const path = '/copyright'
 
   return {
-    title: 'Copyright Notice - Lucid Blocks Wiki',
-    description: 'Copyright and intellectual property information for Lucid Blocks Wiki. Learn about content ownership, fair use, DMCA policy, and how to report copyright infringement.',
+    title: 'Copyright Notice - Idols of Ash Wiki',
+    description: 'Copyright and intellectual property information for Idols of Ash Wiki. Learn about content ownership, fair use, DMCA policy, and how to report copyright infringement.',
     keywords: [
       'copyright notice',
-      'Lucid Blocks Wiki copyright',
+      'Idols of Ash Wiki copyright',
       'DMCA policy',
       'intellectual property',
       'content ownership',
@@ -37,21 +37,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: locale,
       url: locale === 'en' ? `${siteUrl}${path}` : `${siteUrl}/${locale}${path}`,
-      siteName: 'Lucid Blocks Wiki',
-      title: 'Copyright Notice - Lucid Blocks Wiki',
-      description: 'Copyright and intellectual property information for Lucid Blocks Wiki.',
+      siteName: 'Idols of Ash Wiki',
+      title: 'Copyright Notice - Idols of Ash Wiki',
+      description: 'Copyright and intellectual property information for Idols of Ash Wiki.',
       images: [
         {
           url: `${siteUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
-          alt: 'Lucid Blocks Wiki',
+          alt: 'Idols of Ash Wiki',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Copyright Notice - Lucid Blocks Wiki',
+      title: 'Copyright Notice - Idols of Ash Wiki',
       description: 'Copyright and intellectual property information.',
       images: [`${siteUrl}/og-image.jpg`],
     },
@@ -72,7 +72,7 @@ export default function Copyright() {
             Intellectual property rights and usage terms
           </p>
           <p className="text-slate-400 text-sm">
-            Last Updated: March 14, 2026
+            Last Updated: April 8, 2026
           </p>
         </div>
       </section>
@@ -84,22 +84,22 @@ export default function Copyright() {
             <h2>1. Copyright Ownership</h2>
             <h3>1.1 Website Content</h3>
             <p>
-              © 2025-2026 Lucid Blocks Wiki. All rights reserved.
+              © 2025-2026 Idols of Ash Wiki. All rights reserved.
             </p>
             <p>
               Unless otherwise noted, all original content on this website, including but not limited to text,
-              graphics, logos, guides, articles, and compilations, is the property of Lucid Blocks Wiki and is
+              graphics, logos, guides, articles, and compilations, is the property of Idols of Ash Wiki and is
               protected by international copyright laws.
             </p>
 
             <h3>1.2 Game Assets and Trademarks</h3>
             <p>
-              Lucid Blocks Wiki is an <strong>unofficial fan-made website</strong> and is NOT affiliated with,
+              Idols of Ash Wiki is an <strong>unofficial fan-made website</strong> and is NOT affiliated with,
               endorsed by, or associated with:
             </p>
             <ul>
-              <li><strong>Steam</strong> - Owner of the Steam platform</li>
-              <li><strong>Lucid Blocks Developers</strong> - Creators of the Lucid Blocks game</li>
+              <li><strong>itch.io / Steam</strong> - Owner of the itch.io / Steam platform</li>
+              <li><strong>Idols of Ash Developers</strong> - Creators of the Idols of Ash game</li>
             </ul>
             <p>
               All game-related content, including but not limited to:
@@ -160,13 +160,13 @@ export default function Copyright() {
             </p>
             <ul>
               <li><strong>STEAM</strong> - Trademark of Valve Corporation</li>
-              <li><strong>Lucid Blocks</strong> - Trademark of the game developers</li>
-              <li><strong>Lucid Blocks Wiki</strong> - Our own branding (not affiliated with the game)</li>
+              <li><strong>Idols of Ash</strong> - Trademark of the game developers</li>
+              <li><strong>Idols of Ash Wiki</strong> - Our own branding (not affiliated with the game)</li>
             </ul>
             <p>
               All other trademarks, service marks, and trade names referenced on this website are the property of
               their respective owners. The use of any trademark on this website does not imply endorsement or
-              affiliation with Lucid Blocks Wiki.
+              affiliation with Idols of Ash Wiki.
             </p>
 
             <h2>5. DMCA Policy</h2>
@@ -208,8 +208,8 @@ export default function Copyright() {
             </p>
             <p>
               <strong>DMCA Agent</strong><br />
-              Lucid Blocks Wiki<br />
-              Email: <a href="mailto:dmca@lucidblocks.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">dmca@lucidblocks.wiki</a>
+              Idols of Ash Wiki<br />
+              Email: <a href="mailto:dmca@idols-of-ash.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">dmca@idols-of-ash.wiki</a>
             </p>
             <p>
               <strong>Note:</strong> Please allow up to 7 business days for a response. Misrepresentation in a
@@ -245,12 +245,12 @@ export default function Copyright() {
               If you wish to use or reference our original content (guides, articles, data compilations), please:
             </p>
             <ul>
-              <li>Provide clear attribution to "Lucid Blocks Wiki"</li>
+              <li>Provide clear attribution to "Idols of Ash Wiki"</li>
               <li>Include a link back to the original page (if digital)</li>
               <li>Do not imply endorsement or affiliation</li>
             </ul>
             <p>
-              Example attribution: <em>"Source: Lucid Blocks Wiki (lucidblocks.wiki)"</em>
+              Example attribution: <em>"Source: Idols of Ash Wiki (idols-of-ash.wiki)"</em>
             </p>
 
             <h2>8. Repeat Infringer Policy</h2>
@@ -285,8 +285,8 @@ export default function Copyright() {
               For copyright questions, licensing inquiries, or to report copyright infringement:
             </p>
             <p>
-              <strong>General Inquiries:</strong> <a href="mailto:copyright@lucidblocks.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">copyright@lucidblocks.wiki</a><br />
-              <strong>DMCA Notices:</strong> <a href="mailto:dmca@lucidblocks.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">dmca@lucidblocks.wiki</a>
+              <strong>General Inquiries:</strong> <a href="mailto:copyright@idols-of-ash.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">copyright@idols-of-ash.wiki</a><br />
+              <strong>DMCA Notices:</strong> <a href="mailto:dmca@idols-of-ash.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">dmca@idols-of-ash.wiki</a>
             </p>
             <p>
               We aim to respond to all legitimate inquiries within 7 business days.
