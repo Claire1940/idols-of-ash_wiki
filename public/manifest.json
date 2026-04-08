@@ -1,11 +1,11 @@
 {
-  "name": "Lucid Blocks Wiki - Crafting, Biomes & Achievements",
-  "short_name": "Lucid Blocks",
-  "description": "Lucid Blocks Wiki covers crafting, biomes, creatures, items, achievements, endings, and survival tips for the surreal voxel sandbox adventure on Steam.",
+  "name": "Idols of Ash Wiki - Guide, Ending, Nightmare & First Kiln",
+  "short_name": "Idols of Ash",
+  "description": "Idols of Ash hub for download info, controls, endings, Nightmare and First Kiln guides, speedrun routes, and the latest fixes for black screen issues.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "any",
-  "theme_color": "#1a7a7a",
+  "theme_color": "#b83030",
   "background_color": "#0a0a0a",
   "icons": [
     {
