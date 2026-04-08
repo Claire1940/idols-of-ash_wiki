@@ -42,6 +42,11 @@ export const iconRegistry: Record<string, LucideIcon> = {
   Wind: LucideIcons.Wind,
   FileText: LucideIcons.FileText,
   Lightbulb: LucideIcons.Lightbulb,
+  // 模块13-16新增图标
+  Layers: LucideIcons.Layers,
+  ScrollText: LucideIcons.ScrollText,
+  Timer: LucideIcons.Timer,
+  Library: LucideIcons.Library,
 
   // UI 交互图标
   Sparkles: LucideIcons.Sparkles,

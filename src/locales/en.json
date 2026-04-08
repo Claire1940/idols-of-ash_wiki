@@ -57,7 +57,7 @@
   "tools": {
     "title": "Idols of Ash",
     "titleHighlight": "Guide Hub",
-    "subtitle": "Jump to any section: download, beginner tips, controls, First Kiln, Nightmare Mode, walkthrough, endings, grappling hook, centipede guide, black screen fix, Steam release, and browser play.",
+    "subtitle": "Jump to any section: download, beginner tips, controls, First Kiln, Nightmare Mode, walkthrough, endings, grappling hook, centipede guide, black screen fix, Steam release, browser play, game modes, patch notes, speedrun, and story explained.",
     "cards": [
       {
         "icon": "Download",
@@ -118,6 +118,26 @@
         "icon": "Globe",
         "title": "Idols of Ash Play Online",
         "description": "Browser play portals and official download comparison"
+      },
+      {
+        "icon": "Layers",
+        "title": "Idols of Ash Game Modes",
+        "description": "Normal, Nightmare, and First Kiln comparison at a glance"
+      },
+      {
+        "icon": "ScrollText",
+        "title": "Idols of Ash Patch Notes",
+        "description": "Launch-week fixes from v1.1 to v1.13 summarized"
+      },
+      {
+        "icon": "Timer",
+        "title": "Idols of Ash Speedrun",
+        "description": "Benchmark runs for Normal, Nightmare, and First Kiln"
+      },
+      {
+        "icon": "Library",
+        "title": "Idols of Ash Story Explained",
+        "description": "Lore, endings interpretation, and the centipede's role"
       }
     ]
   },
@@ -557,6 +577,126 @@
             "No extraction or local install steps",
             "Useful for checking controls and early feel before downloading"
           ]
+        }
+      ]
+    },
+    "gameModes": {
+      "eyebrow": "Progression",
+      "title": "Idols of Ash Game Modes",
+      "subtitle": "Three escalating modes with clear progression. Compare what actually changes between Normal, Nightmare, and First Kiln before committing.",
+      "intro": "Normal Mode is the core first clear. Nightmare Mode turns the same descent into a much harsher execution test. First Kiln shifts the run into a deeper secret challenge with its own map and mechanics.",
+      "tableHeaders": ["Feature", "Normal", "Nightmare", "First Kiln"],
+      "tableRows": [
+        ["Unlock", "Available at the start", "Clear Normal Mode first", "Clear Nightmare Mode first"],
+        ["Map", "Main abyss route", "Main abyss route", "Secret bespoke map"],
+        ["Enemy", "1 centipede, base speed", "1 faster, more aggressive centipede", "Up to 4 centipedes at once"],
+        ["Visibility", "Standard", "Reduced, significantly darker", "Jagged and confusing terrain"],
+        ["Objective", "Reach the bottom of the abyss", "Reach the bottom under harsher conditions", "Collect Embers and survive the deeper route"]
+      ],
+      "modeCards": [
+        {
+          "mode": "Normal Mode",
+          "badge": "Start Here",
+          "summary": "The foundational run. Learn grapple rhythm, safe releases, and descent pace. Clearing it unlocks Nightmare."
+        },
+        {
+          "mode": "Nightmare Mode",
+          "badge": "Unlock After Normal",
+          "summary": "Faster centipede, heavier darkness, less room for slow Ctrl descents. Clearing it unlocks First Kiln."
+        },
+        {
+          "mode": "First Kiln Mode",
+          "badge": "Unlock After Nightmare",
+          "summary": "Secret map, ember collection, and up to four centipedes simultaneously. The game's final and hardest challenge."
+        }
+      ]
+    },
+    "patchNotes": {
+      "eyebrow": "Updates",
+      "title": "Idols of Ash Patch Notes",
+      "subtitle": "Idols of Ash received multiple rapid updates right after release. This page turns the official devlog into a cleaner player-facing changelog.",
+      "intro": "The launch-week patches focus on stability, control comfort, monster behavior, and deep-run rope handling. Key changes are highlighted so players can quickly see what is relevant to their current build.",
+      "items": [
+        {
+          "version": "Version 1.13",
+          "date": "April 5, 2026",
+          "title": "Windows Compatibility Update",
+          "summary": "Adds ANGLE rendering support for Windows to address crashes and black screen startup problems.",
+          "bullets": [
+            "Adds ANGLE rendering mode for Windows",
+            "Targets graphics-driver compatibility issues",
+            "Helps resolve crashes and black screen on startup"
+          ]
+        },
+        {
+          "version": "Version 1.12",
+          "date": "April 4, 2026",
+          "title": "Control and Readability Update",
+          "summary": "A quality-of-life patch focused on input options and monster readability.",
+          "bullets": [
+            "Adds mouse and gamepad sensitivity controls",
+            "Adds Invert Y option for mouse and gamepad",
+            "Fixes Monster Bio-Luminosity not applying correctly"
+          ]
+        },
+        {
+          "version": "Version 1.11 (Hotfix)",
+          "date": "April 4, 2026",
+          "title": "Monster Behavior Hotfix",
+          "summary": "Corrects a monster behavior regression introduced by the previous update.",
+          "bullets": [
+            "Fixes the monster becoming too passive after v1.1",
+            "Restores intended chase pressure and aggression",
+            "Post-hotfix runs feel correctly punishing when you stall"
+          ]
+        },
+        {
+          "version": "Version 1.1",
+          "date": "April 4, 2026",
+          "title": "Deep Descent Rope Fix",
+          "summary": "Improves rope swinging behavior at greater depths, especially for First Kiln.",
+          "bullets": [
+            "Fixes rope swinging issues deep in the run",
+            "Especially helpful in the deeper parts of First Kiln",
+            "Current speedrun routes are built around this updated hook behavior"
+          ]
+        }
+      ]
+    },
+    "speedrun": {
+      "eyebrow": "Advanced Play",
+      "title": "Idols of Ash Speedrun",
+      "subtitle": "The game's short length and grapple movement make it a natural speedrun target. Benchmark runs and route notes for Normal, Nightmare, and First Kiln.",
+      "intro": "Idols of Ash speedruns are built around fast vertical commitment, clean grapple saves, and memorizing where you can drop without hesitation. Public benchmark runs show distinct routing styles for each category.",
+      "tableHeaders": ["Category", "Benchmark", "Route Focus", "Why Watch"],
+      "tableRows": [
+        ["Normal", "4:58.050", "Fast center-line descent with minimal hesitation and limited full rappels", "Clean reference for baseline route shape and safe aggression"],
+        ["Nightmare", "4:09.700 (WR)", "Aggressive free-fall tempo under darker visibility and higher chase pressure", "See how routing changes once the mode stops forgiving slow movement"],
+        ["First Kiln", "6:58.467", "Secret-map routing with ember pressure and heavier punishment for missed lines", "Shows how advanced runs shift from pure descent speed into route stability"],
+        ["Run Playlist", "BubbleCerberus", "Attempts, clears, and category-specific practice footage in one place", "Good entry point for comparing evolving routes across all categories"]
+      ]
+    },
+    "storyExplained": {
+      "eyebrow": "Lore",
+      "title": "Idols of Ash Story Explained",
+      "subtitle": "Idols of Ash tells its story through atmosphere first and explanation second. This page pulls the key signals into one readable interpretation without a giant codex dump.",
+      "intro": "The game gives players a clear premise but only a thin layer of direct exposition: descend into an ancient place, survive the pursuit, and keep going deeper than seems reasonable. The story works because the environment, the chase, and the ending structure all reinforce the same feeling.",
+      "items": [
+        {
+          "section": "What the game confirms immediately",
+          "content": "The official pitch is simple and strong: you descend thousands of meters into a dark and ancient place while something hunts you. There is no combat layer distracting from that setup, so the descent itself becomes the story's main action."
+        },
+        {
+          "section": "How the narrative is delivered",
+          "content": "Idols of Ash relies on environmental scale, ash-filled spaces, ruined architecture, sparse interaction points, and relentless pressure from the centipede. Instead of long lore text, it lets movement and atmosphere carry the meaning."
+        },
+        {
+          "section": "Why the centipede matters beyond being a monster",
+          "content": "The centipede is both the game's enemy and its pacing engine. It turns every stop into a threat, which makes the journey feel less like exploration and more like a forced descent through a place that does not want you there."
+        },
+        {
+          "section": "How to read the three endings",
+          "content": "Three distinct endings are confirmed across Normal, Nightmare, and First Kiln. Read together, they turn the game from a single survival run into a layered structure: first the core descent, then the harsher repeat, then the deeper hidden route where the ash-and-ember imagery comes closest to the surface."
         }
       ]
     }

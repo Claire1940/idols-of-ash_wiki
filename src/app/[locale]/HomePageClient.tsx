@@ -19,15 +19,19 @@ import {
   Gamepad2,
   GitBranch,
   Globe,
+  Layers,
+  Library,
   Lightbulb,
   Lock,
   Map,
   MessageCircle,
   Monitor,
   Moon,
+  ScrollText,
   ShoppingBag,
   Skull,
   Sparkles,
+  Timer,
   Trophy,
   Volume2,
   Wind,
@@ -313,7 +317,8 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
               const sectionIds = [
                 'download', 'beginner-guide', 'controls', 'first-kiln',
                 'nightmare-mode-guide', 'walkthrough', 'endings', 'grappling-hook-guide',
-                'centipede-guide', 'black-screen-fix', 'steam-release', 'play-online'
+                'centipede-guide', 'black-screen-fix', 'steam-release', 'play-online',
+                'game-modes', 'patch-notes', 'speedrun', 'story-explained'
               ]
               const sectionId = sectionIds[index]
 
@@ -946,6 +951,286 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
                 </div>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Module 13: Game Modes */}
+      <section id="game-modes" className="scroll-mt-24 px-4 py-20">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.gameModes.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['gameModes']} locale={locale}>
+                {t.modules.gameModes.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.gameModes.subtitle}</p>
+          </div>
+
+          <p className="text-muted-foreground text-base max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+            {t.modules.gameModes.intro}
+          </p>
+
+          {/* Mode Summary Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 scroll-reveal">
+            {t.modules.gameModes.modeCards.map((card: any, i: number) => {
+              const icons = [BookOpen, Moon, Flame]
+              const IconComp = icons[i] || Layers
+              return (
+                <div key={i} className={`p-6 rounded-xl border ${i === 0 ? 'border-[hsl(var(--nav-theme)/0.3)] bg-[hsl(var(--nav-theme)/0.05)]' : i === 1 ? 'border-border bg-white/[0.03]' : 'border-[hsl(var(--nav-theme)/0.5)] bg-[hsl(var(--nav-theme)/0.08)]'}`}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-[hsl(var(--nav-theme)/0.15)] flex items-center justify-center flex-shrink-0">
+                      <IconComp className="w-5 h-5 text-[hsl(var(--nav-theme-light))]" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-base">{card.mode}</h3>
+                      <span className="text-xs text-[hsl(var(--nav-theme-light))] font-medium">{card.badge}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{card.summary}</p>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Comparison Table - Desktop */}
+          <div className="scroll-reveal hidden md:block rounded-xl border border-border overflow-hidden">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-[hsl(var(--nav-theme)/0.1)] border-b border-border">
+                  {t.modules.gameModes.tableHeaders.map((header: string, i: number) => (
+                    <th key={i} className={`text-left px-5 py-4 font-semibold ${i === 0 ? 'text-muted-foreground w-32' : 'text-[hsl(var(--nav-theme-light))]'}`}>{header}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {t.modules.gameModes.tableRows.map((row: string[], i: number) => (
+                  <tr key={i} className={`border-b border-border last:border-0 ${i % 2 === 0 ? '' : 'bg-white/[0.02]'}`}>
+                    {row.map((cell: string, j: number) => (
+                      <td key={j} className={`px-5 py-4 ${j === 0 ? 'font-semibold text-[hsl(var(--nav-theme-light))]' : 'text-muted-foreground'}`}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Comparison Table - Mobile stacked */}
+          <div className="md:hidden space-y-4 scroll-reveal">
+            {t.modules.gameModes.tableRows.map((row: string[], i: number) => (
+              <div key={i} className="p-4 bg-white/5 border border-border rounded-xl">
+                <p className="text-xs font-bold text-[hsl(var(--nav-theme-light))] uppercase tracking-wide mb-2">{row[0]}</p>
+                <div className="space-y-1">
+                  {t.modules.gameModes.tableHeaders.slice(1).map((header: string, j: number) => (
+                    <p key={j} className="text-sm text-muted-foreground"><span className="font-medium text-foreground">{header}:</span> {row[j + 1]}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Module 14: Patch Notes */}
+      <section id="patch-notes" className="scroll-mt-24 px-4 py-20 bg-white/[0.02]">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.patchNotes.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['patchNotes']} locale={locale}>
+                {t.modules.patchNotes.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.patchNotes.subtitle}</p>
+          </div>
+
+          <p className="text-muted-foreground text-base max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+            {t.modules.patchNotes.intro}
+          </p>
+
+          <div className="scroll-reveal space-y-4">
+            {t.modules.patchNotes.items.map((item: any, i: number) => (
+              <details
+                key={i}
+                className="group border border-border rounded-xl overflow-hidden hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
+                open={i === 0}
+              >
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-white/5 transition-colors list-none">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-9 h-9 rounded-lg bg-[hsl(var(--nav-theme)/0.15)] flex items-center justify-center flex-shrink-0">
+                      <ScrollText className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-bold text-sm text-[hsl(var(--nav-theme-light))]">{item.version}</span>
+                        <span className="text-xs text-muted-foreground">{item.date}</span>
+                      </div>
+                      <p className="font-semibold text-sm md:text-base truncate">{item.title}</p>
+                    </div>
+                  </div>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0 ml-3 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-5 pb-5 border-t border-border pt-4">
+                  <p className="text-sm text-muted-foreground mb-3">{item.summary}</p>
+                  <ul className="space-y-1.5">
+                    {item.bullets.map((bullet: string, j: number) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-[hsl(var(--nav-theme-light))] mt-0.5 flex-shrink-0" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <div className="mt-8 scroll-reveal flex justify-center">
+            <a
+              href="https://leafygames.itch.io/idols-of-ash/devlog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm font-medium hover:bg-[hsl(var(--nav-theme)/0.2)] transition-colors"
+            >
+              <ExternalLink className="w-4 h-4" /> Read Full Devlog on itch.io
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Module 15: Speedrun */}
+      <section id="speedrun" className="scroll-mt-24 px-4 py-20">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.speedrun.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['speedrun']} locale={locale}>
+                {t.modules.speedrun.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.speedrun.subtitle}</p>
+          </div>
+
+          <p className="text-muted-foreground text-base max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+            {t.modules.speedrun.intro}
+          </p>
+
+          {/* Speedrun Table - Desktop */}
+          <div className="scroll-reveal hidden md:block rounded-xl border border-border overflow-hidden mb-8">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-[hsl(var(--nav-theme)/0.1)] border-b border-border">
+                  {t.modules.speedrun.tableHeaders.map((header: string, i: number) => (
+                    <th key={i} className="text-left px-5 py-4 font-semibold text-[hsl(var(--nav-theme-light))]">{header}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {t.modules.speedrun.tableRows.map((row: string[], i: number) => (
+                  <tr key={i} className={`border-b border-border last:border-0 ${i % 2 === 0 ? '' : 'bg-white/[0.02]'}`}>
+                    <td className="px-5 py-4 font-bold text-[hsl(var(--nav-theme-light))]">{row[0]}</td>
+                    <td className="px-5 py-4 font-semibold">{row[1]}</td>
+                    <td className="px-5 py-4 text-muted-foreground text-xs leading-relaxed">{row[2]}</td>
+                    <td className="px-5 py-4 text-muted-foreground text-xs leading-relaxed">{row[3]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Speedrun Mobile stacked cards */}
+          <div className="md:hidden space-y-4 scroll-reveal mb-8">
+            {t.modules.speedrun.tableRows.map((row: string[], i: number) => (
+              <div key={i} className="p-5 bg-white/5 border border-border rounded-xl">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-[hsl(var(--nav-theme)/0.15)] flex items-center justify-center flex-shrink-0">
+                    <Timer className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-[hsl(var(--nav-theme-light))]">{row[0]}</p>
+                    <p className="text-sm font-semibold">{row[1]}</p>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground mb-1"><span className="font-medium text-foreground">Route:</span> {row[2]}</p>
+                <p className="text-xs text-muted-foreground"><span className="font-medium text-foreground">Why watch:</span> {row[3]}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="scroll-reveal flex justify-center">
+            <a
+              href="https://www.youtube.com/playlist?list=PLbxc3YvuPGhI5GX0-J81Me1SfRp3SIkiM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm font-medium hover:bg-[hsl(var(--nav-theme)/0.2)] transition-colors"
+            >
+              <ExternalLink className="w-4 h-4" /> Watch Speedrun Playlist
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Module 16: Story Explained */}
+      <section id="story-explained" className="scroll-mt-24 px-4 py-20 bg-white/[0.02]">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12 scroll-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] mb-4 text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+              {t.modules.storyExplained.eyebrow}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <LinkedTitle linkData={moduleLinkMap['storyExplained']} locale={locale}>
+                {t.modules.storyExplained.title}
+              </LinkedTitle>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{t.modules.storyExplained.subtitle}</p>
+          </div>
+
+          <p className="text-muted-foreground text-base max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+            {t.modules.storyExplained.intro}
+          </p>
+
+          <div className="scroll-reveal space-y-3">
+            {t.modules.storyExplained.items.map((item: any, i: number) => {
+              const icons = [Activity, Wind, Skull, Trophy]
+              const IconComp = icons[i] || Library
+              return (
+                <details
+                  key={i}
+                  className="group border border-border rounded-xl overflow-hidden hover:border-[hsl(var(--nav-theme)/0.5)] transition-colors"
+                  open={i === 0}
+                >
+                  <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-white/5 transition-colors list-none">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-[hsl(var(--nav-theme)/0.15)] flex items-center justify-center flex-shrink-0">
+                        <IconComp className="w-4 h-4 text-[hsl(var(--nav-theme-light))]" />
+                      </div>
+                      <span className="font-semibold text-sm md:text-base">{item.section}</span>
+                    </div>
+                    <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0 ml-3 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed border-t border-border pt-4">
+                    {item.content}
+                  </div>
+                </details>
+              )
+            })}
+          </div>
+
+          <div className="mt-8 scroll-reveal p-5 bg-[hsl(var(--nav-theme)/0.05)] border border-[hsl(var(--nav-theme)/0.3)] rounded-xl">
+            <div className="flex items-start gap-3">
+              <Library className="w-5 h-5 text-[hsl(var(--nav-theme-light))] flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-bold mb-1">The story works because of what is not said</h3>
+                <p className="text-sm text-muted-foreground">Idols of Ash does not over-explain its world. The descent, the ash, the centipede, and the endings build meaning through repetition and pressure rather than explicit lore text.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
