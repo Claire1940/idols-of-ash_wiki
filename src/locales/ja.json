@@ -11,12 +11,13 @@
     }
   },
   "nav": {
-    "guides": "ガイド",
-    "crafting": "クラフト",
-    "items": "アイテム",
-    "biomes": "バイオーム",
-    "building": "建築",
-    "support": "サポート"
+    "developer": "デベロッパー",
+    "download": "ダウンロード",
+    "guide": "ガイド",
+    "media": "メディア",
+    "modes": "モード",
+    "speedrun": "スピードラン",
+    "walkthrough": "攻略"
   },
   "common": {
     "home": "ホーム",

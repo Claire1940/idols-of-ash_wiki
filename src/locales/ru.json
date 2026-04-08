@@ -11,12 +11,13 @@
     }
   },
   "nav": {
-    "guides": "Руководства",
-    "crafting": "Крафт",
-    "items": "Предметы",
-    "biomes": "Биомы",
-    "building": "Строительство",
-    "support": "Поддержка"
+    "developer": "Разработчик",
+    "download": "Скачать",
+    "guide": "Руководство",
+    "media": "Медиа",
+    "modes": "Режимы",
+    "speedrun": "Спидран",
+    "walkthrough": "Прохождение"
   },
   "common": {
     "home": "Главная",

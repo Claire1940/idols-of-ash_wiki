@@ -11,12 +11,13 @@
     }
   },
   "nav": {
-    "guides": "Guías",
-    "crafting": "Fabricación",
-    "items": "Objetos",
-    "biomes": "Biomas",
-    "building": "Construcción",
-    "support": "Soporte"
+    "developer": "Desarrollador",
+    "download": "Descargar",
+    "guide": "Guía",
+    "media": "Medios",
+    "modes": "Modos",
+    "speedrun": "Speedrun",
+    "walkthrough": "Guía completa"
   },
   "common": {
     "home": "Inicio",

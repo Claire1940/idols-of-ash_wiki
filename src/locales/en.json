@@ -10,7 +10,15 @@
       "twitterDescription": "Idols of Ash hub for download info, controls, endings, Nightmare and First Kiln guides, speedrun routes, and fixes for black screen issues."
     }
   },
-  "nav": {},
+  "nav": {
+    "developer": "Developer",
+    "download": "Download",
+    "guide": "Guide",
+    "media": "Media",
+    "modes": "Modes",
+    "speedrun": "Speedrun",
+    "walkthrough": "Walkthrough"
+  },
   "common": {
     "home": "Home",
     "more": "More",
@@ -514,12 +522,30 @@
       "subtitle": "Players are mostly asking one simple question: where can I get Idols of Ash right now, and what does Steam soon actually mean?",
       "intro": "Right now, Idols of Ash is already live as a downloadable release on itch.io, while the official site keeps the Steam messaging short and simple: the game is coming to Steam soon.",
       "items": [
-        { "topic": "Current live store", "value": "itch.io" },
-        { "topic": "Current release status", "value": "Released" },
-        { "topic": "Download platforms available now", "value": "Windows and Linux" },
-        { "topic": "Current pricing model", "value": "$3.00 USD or more, currently shown with a 100% off launch sale on itch.io" },
-        { "topic": "Official Steam wording", "value": "Coming to Steam soon" },
-        { "topic": "What Steam soon means right now", "value": "The official site confirms future Steam availability, while the playable release currently points users to itch.io" }
+        {
+          "topic": "Current live store",
+          "value": "itch.io"
+        },
+        {
+          "topic": "Current release status",
+          "value": "Released"
+        },
+        {
+          "topic": "Download platforms available now",
+          "value": "Windows and Linux"
+        },
+        {
+          "topic": "Current pricing model",
+          "value": "$3.00 USD or more, currently shown with a 100% off launch sale on itch.io"
+        },
+        {
+          "topic": "Official Steam wording",
+          "value": "Coming to Steam soon"
+        },
+        {
+          "topic": "What Steam soon means right now",
+          "value": "The official site confirms future Steam availability, while the playable release currently points users to itch.io"
+        }
       ]
     },
     "playOnline": {
@@ -585,13 +611,43 @@
       "title": "Idols of Ash Game Modes",
       "subtitle": "Three escalating modes with clear progression. Compare what actually changes between Normal, Nightmare, and First Kiln before committing.",
       "intro": "Normal Mode is the core first clear. Nightmare Mode turns the same descent into a much harsher execution test. First Kiln shifts the run into a deeper secret challenge with its own map and mechanics.",
-      "tableHeaders": ["Feature", "Normal", "Nightmare", "First Kiln"],
+      "tableHeaders": [
+        "Feature",
+        "Normal",
+        "Nightmare",
+        "First Kiln"
+      ],
       "tableRows": [
-        ["Unlock", "Available at the start", "Clear Normal Mode first", "Clear Nightmare Mode first"],
-        ["Map", "Main abyss route", "Main abyss route", "Secret bespoke map"],
-        ["Enemy", "1 centipede, base speed", "1 faster, more aggressive centipede", "Up to 4 centipedes at once"],
-        ["Visibility", "Standard", "Reduced, significantly darker", "Jagged and confusing terrain"],
-        ["Objective", "Reach the bottom of the abyss", "Reach the bottom under harsher conditions", "Collect Embers and survive the deeper route"]
+        [
+          "Unlock",
+          "Available at the start",
+          "Clear Normal Mode first",
+          "Clear Nightmare Mode first"
+        ],
+        [
+          "Map",
+          "Main abyss route",
+          "Main abyss route",
+          "Secret bespoke map"
+        ],
+        [
+          "Enemy",
+          "1 centipede, base speed",
+          "1 faster, more aggressive centipede",
+          "Up to 4 centipedes at once"
+        ],
+        [
+          "Visibility",
+          "Standard",
+          "Reduced, significantly darker",
+          "Jagged and confusing terrain"
+        ],
+        [
+          "Objective",
+          "Reach the bottom of the abyss",
+          "Reach the bottom under harsher conditions",
+          "Collect Embers and survive the deeper route"
+        ]
       ],
       "modeCards": [
         {
@@ -668,12 +724,37 @@
       "title": "Idols of Ash Speedrun",
       "subtitle": "The game's short length and grapple movement make it a natural speedrun target. Benchmark runs and route notes for Normal, Nightmare, and First Kiln.",
       "intro": "Idols of Ash speedruns are built around fast vertical commitment, clean grapple saves, and memorizing where you can drop without hesitation. Public benchmark runs show distinct routing styles for each category.",
-      "tableHeaders": ["Category", "Benchmark", "Route Focus", "Why Watch"],
+      "tableHeaders": [
+        "Category",
+        "Benchmark",
+        "Route Focus",
+        "Why Watch"
+      ],
       "tableRows": [
-        ["Normal", "4:58.050", "Fast center-line descent with minimal hesitation and limited full rappels", "Clean reference for baseline route shape and safe aggression"],
-        ["Nightmare", "4:09.700 (WR)", "Aggressive free-fall tempo under darker visibility and higher chase pressure", "See how routing changes once the mode stops forgiving slow movement"],
-        ["First Kiln", "6:58.467", "Secret-map routing with ember pressure and heavier punishment for missed lines", "Shows how advanced runs shift from pure descent speed into route stability"],
-        ["Run Playlist", "BubbleCerberus", "Attempts, clears, and category-specific practice footage in one place", "Good entry point for comparing evolving routes across all categories"]
+        [
+          "Normal",
+          "4:58.050",
+          "Fast center-line descent with minimal hesitation and limited full rappels",
+          "Clean reference for baseline route shape and safe aggression"
+        ],
+        [
+          "Nightmare",
+          "4:09.700 (WR)",
+          "Aggressive free-fall tempo under darker visibility and higher chase pressure",
+          "See how routing changes once the mode stops forgiving slow movement"
+        ],
+        [
+          "First Kiln",
+          "6:58.467",
+          "Secret-map routing with ember pressure and heavier punishment for missed lines",
+          "Shows how advanced runs shift from pure descent speed into route stability"
+        ],
+        [
+          "Run Playlist",
+          "BubbleCerberus",
+          "Attempts, clears, and category-specific practice footage in one place",
+          "Good entry point for comparing evolving routes across all categories"
+        ]
       ]
     },
     "storyExplained": {
@@ -756,125 +837,145 @@
     "disclaimer": "Unofficial fan-made resource website."
   },
   "pages": {
-    "guides": {
-      "title": "Idols of Ash Guides",
-      "description": "Complete gameplay guides from beginner basics to advanced Apotheosis strategies. Master survival and crafting.",
-      "metaTitle": "Idols of Ash Guides - Beginner to Advanced Strategies",
-      "metaDescription": "Complete Idols of Ash guides covering beginner tips, Apotheosis system, survival strategies, and expert tactics for mastering the surreal sandbox.",
-      "categoryLabel": "GAME GUIDES",
+    "developer": {
+      "title": "Idols of Ash Developer",
+      "description": "Learn about Leafy Games, the indie studio behind Idols of Ash. Discover the story, vision, and development journey of this horror climbing game.",
+      "metaTitle": "Idols of Ash Developer - Leafy Games Studio Profile",
+      "metaDescription": "Explore the story of Leafy Games, the developer behind Idols of Ash. Learn about their design philosophy and the making of this indie horror climbing game.",
+      "categoryLabel": "DEVELOPER INFO",
+      "whatIs": "What is the Developer section?",
+      "whatIsDescription": "Background on Leafy Games and the creative vision behind Idols of Ash. Learn about the studio's design philosophy, inspirations, and the development journey that created this unique horror climbing experience.",
+      "why": "Why read about the developer?",
+      "whySteps": {
+        "step1Title": "Understand the Vision",
+        "step1Description": "Learn about Leafy Games' design goals and the inspiration behind Idols of Ash",
+        "step2Title": "Development Insights",
+        "step2Description": "Discover how the grappling hook mechanics and horror elements were crafted",
+        "step3Title": "Follow Future Projects",
+        "step3Description": "Stay updated on what Leafy Games is working on next after Idols of Ash"
+      },
+      "featured": "Featured & Essential",
+      "all": "All Developer Articles"
+    },
+    "download": {
+      "title": "Idols of Ash Download",
+      "description": "Download Idols of Ash for free on itch.io or wishlist on Steam. Windows and Linux versions available with full installation guides.",
+      "metaTitle": "Idols of Ash Download - Free on itch.io, Coming to Steam",
+      "metaDescription": "Download Idols of Ash for free on itch.io (Windows & Linux) or wishlist it on Steam. Step-by-step installation guide and APK info included.",
+      "categoryLabel": "DOWNLOAD & INSTALL",
+      "whatIs": "What is the Download section?",
+      "whatIsDescription": "Everything you need to get Idols of Ash running on your device. Covers itch.io free download, Steam wishlist, Windows and Linux installation, APK availability, and file size details.",
+      "why": "Why use this download guide?",
+      "whySteps": {
+        "step1Title": "Get the Game Free",
+        "step1Description": "Idols of Ash is currently available for free on itch.io — download it in minutes",
+        "step2Title": "Platform Compatibility",
+        "step2Description": "Confirm your system meets requirements for Windows or Linux before downloading",
+        "step3Title": "Coming to Steam",
+        "step3Description": "Wishlist on Steam to be notified when the full Steam release drops"
+      },
+      "featured": "Featured & Essential",
+      "all": "All Download Guides"
+    },
+    "guide": {
+      "title": "Idols of Ash Guide",
+      "description": "Master Idols of Ash with gameplay guides covering grappling hook mechanics, the centipede stalker, controls, and survival strategies.",
+      "metaTitle": "Idols of Ash Guide - Grappling Hook, Controls & Survival Tips",
+      "metaDescription": "Complete Idols of Ash guide covering grappling hook mechanics, centipede stalker behavior, controls, and strategies for surviving the abyss.",
+      "categoryLabel": "GAMEPLAY GUIDES",
       "whatIs": "What are Guides?",
-      "whatIsDescription": "Comprehensive guides covering gameplay mechanics, survival strategies, and the Apotheosis crafting system. Learn everything from first steps to advanced techniques.",
+      "whatIsDescription": "In-depth gameplay guides for Idols of Ash covering core mechanics, the grappling hook system, centipede stalker patterns, and tips for mastering movement and survival across all difficulty levels.",
       "why": "Why read guides?",
       "whySteps": {
-        "step1Title": "Learn Core Mechanics",
-        "step1Description": "Understand the Apotheosis system and avoid common beginner mistakes",
-        "step2Title": "Fast Progression",
-        "step2Description": "Follow proven paths to survive and thrive in the surreal world",
-        "step3Title": "Master Strategies",
-        "step3Description": "Develop advanced tactics for exploration and crafting"
+        "step1Title": "Master the Grappling Hook",
+        "step1Description": "Learn the physics-based rope mechanics and advanced swing techniques to navigate the abyss",
+        "step2Title": "Survive the Centipede",
+        "step2Description": "Understand stalker behavior patterns and learn how to outmaneuver the threat",
+        "step3Title": "Conquer Every Difficulty",
+        "step3Description": "Apply proven strategies to clear Normal mode and beyond with confidence"
       },
       "featured": "Featured & Essential",
       "all": "All Guides"
     },
-    "crafting": {
-      "title": "Idols of Ash Crafting",
-      "description": "Master the Apotheosis fusion system with essence mechanics, recipes, and crafting strategies for powerful items.",
-      "metaTitle": "Idols of Ash Crafting - Apotheosis System & Recipes",
-      "metaDescription": "Master Idols of Ash Apotheosis crafting system. Learn essence mechanics, fusion recipes, and strategies for creating powerful tools and weapons.",
-      "categoryLabel": "CRAFTING SYSTEM",
-      "whatIs": "What is Crafting?",
-      "whatIsDescription": "The Apotheosis system is a unique essence-driven fusion mechanic where you combine up to six items to discover new recipes. No fixed crafting menus—experimentation is key.",
-      "why": "Why master crafting?",
+    "media": {
+      "title": "Idols of Ash Media",
+      "description": "Official trailers, screenshots, and media for Idols of Ash by Leafy Games. Watch gameplay videos and explore visual content from the horror climbing game.",
+      "metaTitle": "Idols of Ash Media - Official Trailers & Screenshots",
+      "metaDescription": "Watch official Idols of Ash trailers and browse screenshots from Leafy Games. See the horror climbing gameplay before you download.",
+      "categoryLabel": "TRAILERS & MEDIA",
+      "whatIs": "What is the Media section?",
+      "whatIsDescription": "Official and community media for Idols of Ash, including the game trailer, gameplay screenshots, and video content. Preview the horror climbing experience before diving in.",
+      "why": "Why browse media?",
       "whySteps": {
-        "step1Title": "Unlock Powerful Items",
-        "step1Description": "Discover essential tools, weapons, and mobility gear through fusion",
-        "step2Title": "Understand Essences",
-        "step2Description": "Learn how item essences combine to create predictable results",
-        "step3Title": "Optimize Resources",
-        "step3Description": "Use dilution mechanics to maximize output from cheap materials"
+        "step1Title": "Preview Before Playing",
+        "step1Description": "Watch the official trailer to see grappling hook gameplay and the centipede stalker in action",
+        "step2Title": "Understand the Atmosphere",
+        "step2Description": "Browse screenshots to get a feel for the dark, claustrophobic abyss environment",
+        "step3Title": "Share with Friends",
+        "step3Description": "Find quality media to share Idols of Ash with friends and the horror gaming community"
       },
       "featured": "Featured & Essential",
-      "all": "All Crafting Guides"
+      "all": "All Media"
     },
-    "items": {
-      "title": "Idols of Ash Items",
-      "description": "Detailed item guides covering tools, weapons, mobility gear, and storage solutions with crafting recipes and usage tips.",
-      "metaTitle": "Idols of Ash Items - Tools, Weapons & Gear Guide",
-      "metaDescription": "Complete item database for Idols of Ash including tools, weapons, mobility gear, and storage. Learn how to craft and use every item effectively.",
-      "categoryLabel": "ITEMS & EQUIPMENT",
-      "whatIs": "What are Items?",
-      "whatIsDescription": "Comprehensive guides for tools, weapons, mobility gear, and functional items. Learn crafting recipes, usage strategies, and optimal combinations.",
-      "why": "Why check item guides?",
+    "modes": {
+      "title": "Idols of Ash Modes",
+      "description": "Explore all Idols of Ash game modes including Normal, Nightmare, and First Kiln. Learn mode differences, unlocks, and difficulty strategies.",
+      "metaTitle": "Idols of Ash Modes - Normal, Nightmare & First Kiln Guide",
+      "metaDescription": "Complete guide to all Idols of Ash modes: Normal, Nightmare, and First Kiln. Learn the differences, unlock requirements, and winning strategies.",
+      "categoryLabel": "GAME MODES",
+      "whatIs": "What are Game Modes?",
+      "whatIsDescription": "Idols of Ash features distinct game modes that change the challenge level and experience. This section covers Normal mode, the brutal Nightmare mode, and the advanced First Kiln challenge — including how to unlock them and what to expect.",
+      "why": "Why read mode guides?",
       "whySteps": {
-        "step1Title": "Learn Crafting Recipes",
-        "step1Description": "Discover how to craft essential tools and weapons using Apotheosis",
-        "step2Title": "Optimize Equipment",
-        "step2Description": "Choose the best items for your playstyle and progression stage",
-        "step3Title": "Improve Survival",
-        "step3Description": "Equip mobility gear and weapons to navigate the dangerous world"
+        "step1Title": "Choose Your Difficulty",
+        "step1Description": "Understand what each mode demands before you start so you pick the right challenge",
+        "step2Title": "Unlock Nightmare Mode",
+        "step2Description": "Learn the unlock requirements and differences between Normal and Nightmare runs",
+        "step3Title": "Conquer First Kiln",
+        "step3Description": "Tackle the hardest challenge in Idols of Ash with targeted First Kiln strategies"
       },
       "featured": "Featured & Essential",
-      "all": "All Items"
+      "all": "All Mode Guides"
     },
-    "biomes": {
-      "title": "Idols of Ash Biomes",
-      "description": "Explore world regions, environmental features, resource locations, and survival tips for each biome.",
-      "metaTitle": "Idols of Ash Biomes - World Regions & Exploration",
-      "metaDescription": "Explore Idols of Ash biomes including Tiamana Leylines, Fog Meadow, and surreal regions. Find resources, avoid dangers, and navigate the infinite world.",
-      "categoryLabel": "WORLD REGIONS",
-      "whatIs": "What are Biomes?",
-      "whatIsDescription": "Guides to different world regions, environmental features, resource distribution, and danger zones. Learn what to expect and how to prepare for each area.",
-      "why": "Why explore biomes?",
+    "speedrun": {
+      "title": "Idols of Ash Speedrun",
+      "description": "Idols of Ash speedrun routes, timing tricks, and community records for Normal%, Nightmare, and First Kiln categories.",
+      "metaTitle": "Idols of Ash Speedrun - Routes, Tricks & Community Records",
+      "metaDescription": "Optimize your Idols of Ash speedrun with proven routes, skip techniques, and current community records for Normal%, Nightmare, and First Kiln.",
+      "categoryLabel": "SPEEDRUNNING",
+      "whatIs": "What is Speedrunning?",
+      "whatIsDescription": "Speedrunning Idols of Ash means completing the game as fast as possible using optimized routes, movement tricks, and precise execution. This section covers route breakdowns, timing skips, and current community records.",
+      "why": "Why speedrun Idols of Ash?",
       "whySteps": {
-        "step1Title": "Find Resources",
-        "step1Description": "Locate rare materials and essences specific to each region",
-        "step2Title": "Avoid Dangers",
-        "step2Description": "Understand environmental hazards and hostile creatures",
-        "step3Title": "Plan Exploration",
-        "step3Description": "Prepare the right tools and gear for each biome type"
+        "step1Title": "Optimize Your Route",
+        "step1Description": "Learn the fastest paths through the abyss for Normal%, Nightmare, and First Kiln",
+        "step2Title": "Master Movement Tech",
+        "step2Description": "Use advanced grappling hook techniques and momentum tricks to shave seconds",
+        "step3Title": "Beat Community Records",
+        "step3Description": "Compare your times against current leaderboard records and find where to improve"
       },
       "featured": "Featured & Essential",
-      "all": "All Biomes"
+      "all": "All Speedrun Guides"
     },
-    "building": {
-      "title": "Idols of Ash Building",
-      "description": "Master Qualia personal dimensions, base building, storage management, and creative construction techniques.",
-      "metaTitle": "Idols of Ash Building - Qualia & Base Construction",
-      "metaDescription": "Master Idols of Ash building with Qualia personal dimensions, base construction, storage solutions, and creative building techniques.",
-      "categoryLabel": "BUILDING & BASES",
-      "whatIs": "What is Building?",
-      "whatIsDescription": "Guides to the Qualia personal dimension system, base construction, storage management, and creative building. Learn to create your safe haven in the surreal world.",
-      "why": "Why build bases?",
+    "walkthrough": {
+      "title": "Idols of Ash Walkthrough",
+      "description": "Full Idols of Ash walkthrough covering every section, key decision points, and ending paths for Normal and Nightmare runs.",
+      "metaTitle": "Idols of Ash Walkthrough - Full Game Guide & Endings",
+      "metaDescription": "Complete Idols of Ash walkthrough with step-by-step guidance, key checkpoints, and all ending paths for Normal and Nightmare difficulty.",
+      "categoryLabel": "FULL WALKTHROUGH",
+      "whatIs": "What is a Walkthrough?",
+      "whatIsDescription": "A full step-by-step guide through Idols of Ash from start to finish. Covers every major section, critical decisions, survival tips, and all ending routes so you never get stuck in the abyss.",
+      "why": "Why use a walkthrough?",
       "whySteps": {
-        "step1Title": "Create Safe Spaces",
-        "step1Description": "Establish secure bases for storage and crafting operations",
-        "step2Title": "Manage Resources",
-        "step2Description": "Organize materials efficiently with storage solutions",
-        "step3Title": "Unlock Qualia",
-        "step3Description": "Access personal pocket dimensions for ultimate convenience"
+        "step1Title": "Never Get Stuck",
+        "step1Description": "Follow clear step-by-step guidance through every section of the abyss",
+        "step2Title": "Find All Endings",
+        "step2Description": "Discover every ending path and the conditions needed to unlock each one",
+        "step3Title": "Beat Any Difficulty",
+        "step3Description": "Use Normal and Nightmare walkthrough variants to conquer every challenge mode"
       },
       "featured": "Featured & Essential",
-      "all": "All Building Guides"
-    },
-    "support": {
-      "title": "Idols of Ash Support",
-      "description": "Technical support, platform compatibility, performance optimization, and troubleshooting for common issues.",
-      "metaTitle": "Idols of Ash Support - Technical Help & Fixes",
-      "metaDescription": "Get technical support for Idols of Ash including Steam Deck setup, crash fixes, performance optimization, and platform compatibility guides.",
-      "categoryLabel": "TECHNICAL SUPPORT",
-      "whatIs": "What is Support?",
-      "whatIsDescription": "Technical guides covering platform compatibility, performance optimization, crash fixes, and common issues. Get help with Steam Deck, multiplayer questions, and settings.",
-      "why": "Why check support?",
-      "whySteps": {
-        "step1Title": "Fix Technical Issues",
-        "step1Description": "Resolve crashes, performance problems, and compatibility issues",
-        "step2Title": "Optimize Performance",
-        "step2Description": "Configure settings for best experience on your platform",
-        "step3Title": "Platform Compatibility",
-        "step3Description": "Learn about Steam Deck, controller support, and system requirements"
-      },
-      "featured": "Featured & Essential",
-      "all": "All Support Articles"
+      "all": "All Walkthrough Articles"
     }
   }
 }

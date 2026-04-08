@@ -11,12 +11,13 @@
     }
   },
   "nav": {
-    "guides": "Rehberler",
-    "crafting": "Üretim",
-    "items": "Eşyalar",
-    "biomes": "Biyomlar",
-    "building": "İnşa",
-    "support": "Destek"
+    "developer": "Geliştirici",
+    "download": "İndir",
+    "guide": "Rehber",
+    "media": "Medya",
+    "modes": "Modlar",
+    "speedrun": "Speedrun",
+    "walkthrough": "Oyun Rehberi"
   },
   "common": {
     "home": "Ana Sayfa",
