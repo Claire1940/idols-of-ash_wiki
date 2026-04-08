@@ -12,6 +12,7 @@ import type { LucideIcon } from 'lucide-react'
 export const iconRegistry: Record<string, LucideIcon> = {
   // 工具和资源图标
   Download: LucideIcons.Download,
+  Flame: LucideIcons.Flame,
   BookOpen: LucideIcons.BookOpen,
   Users: LucideIcons.Users,
   ClipboardCheck: LucideIcons.ClipboardCheck,
