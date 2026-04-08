@@ -14,46 +14,45 @@ interface ArticleWithType extends ContentItem {
 
 // Module sub-field mapping: moduleKey -> { field, nameKey }
 const MODULE_FIELDS: Record<string, { field: string; nameKey: string }> = {
-  lucidBlocksBeginnerGuide: { field: 'steps', nameKey: 'title' },
-  lucidBlocksApotheosisCrafting: { field: 'cards', nameKey: 'name' },
-  lucidBlocksToolsAndWeapons: { field: 'items', nameKey: 'name' },
-  lucidBlocksStorageAndInventory: { field: 'solutions', nameKey: 'name' },
-  lucidBlocksQualiaAndBaseBuilding: { field: 'cards', nameKey: 'name' },
-  lucidBlocksWorldRegions: { field: 'regions', nameKey: 'name' },
-  lucidBlocksCreaturesAndEnemies: { field: 'creatures', nameKey: 'name' },
-  lucidBlocksMobilityGear: { field: 'items', nameKey: 'name' },
-  lucidBlocksFarmingAndGrowth: { field: 'sections', nameKey: 'name' },
-  lucidBlocksBestEarlyUnlocks: { field: 'priorities', nameKey: 'name' },
-  lucidBlocksAchievementTracker: { field: 'groups', nameKey: 'name' },
-  lucidBlocksSingleplayerAndPlatformFAQ: { field: 'faqs', nameKey: 'question' },
-  lucidBlocksSteamDeckAndController: { field: 'faqs', nameKey: 'question' },
-  lucidBlocksSettingsAndAccessibility: { field: 'settings', nameKey: 'name' },
-  lucidBlocksUpdatesAndPatchNotes: { field: 'entries', nameKey: 'title' },
-  lucidBlocksCrashFixAndTroubleshooting: { field: 'steps', nameKey: 'title' },
+  download: { field: 'steps', nameKey: 'title' },
+  beginnerGuide: { field: 'steps', nameKey: 'title' },
+  controls: { field: 'rows', nameKey: 'action' },
+  firstKiln: { field: 'items', nameKey: 'title' },
+  nightmareModeGuide: { field: 'items', nameKey: 'title' },
+  walkthrough: { field: 'steps', nameKey: 'title' },
+  endings: { field: 'items', nameKey: 'question' },
+  grapplingHookGuide: { field: 'steps', nameKey: 'title' },
+  centipede: { field: 'cards', nameKey: 'title' },
+  blackScreenFix: { field: 'items', nameKey: 'question' },
+  steamRelease: { field: 'items', nameKey: 'topic' },
+  playOnline: { field: 'cards', nameKey: 'title' },
+  gameModes: { field: 'modeCards', nameKey: 'mode' },
+  patchNotes: { field: 'items', nameKey: 'title' },
+  storyExplained: { field: 'items', nameKey: 'section' },
 }
 
 // Extra semantic keywords per module to boost matching for h2 titles
 // These supplement the module title text when matching against articles
 const MODULE_EXTRA_KEYWORDS: Record<string, string[]> = {
-  lucidBlocksBeginnerGuide: ['guide', 'mastering', 'progression', 'crafting', 'starter'],
-  lucidBlocksApotheosisCrafting: ['apotheosis', 'fusion', 'essence'],
-  lucidBlocksToolsAndWeapons: ['crafting recipes', 'frost pick', 'osmium', 'azrael', 'faith wand'],
-  lucidBlocksStorageAndInventory: ['chest', 'cache cube', 'cabinet', 'storage'],
-  lucidBlocksQualiaAndBaseBuilding: ['qualia', 'clonaqualia', 'personal dimensions'],
-  lucidBlocksWorldRegions: ['tiamana', 'leyline', 'biomes', 'regions'],
-  lucidBlocksCreaturesAndEnemies: ['survival', 'combat', 'surreal creatures'],
-  lucidBlocksMobilityGear: ['bee glider', 'hookshot', 'glider', 'movement'],
-  lucidBlocksFarmingAndGrowth: ['seed', 'farming', 'growth', 'material', 'progression', 'crafting'],
-  lucidBlocksBestEarlyUnlocks: ['early', 'osmium', 'frost pick', 'starter', 'progression'],
-  lucidBlocksAchievementTracker: ['achievement', 'tiamana', 'leyline'],
-  lucidBlocksSingleplayerAndPlatformFAQ: ['multiplayer', 'platform', 'co op'],
-  lucidBlocksSteamDeckAndController: ['steam deck', 'controller', 'proton'],
-  lucidBlocksSettingsAndAccessibility: ['full screen', 'controls', 'display'],
-  lucidBlocksUpdatesAndPatchNotes: ['update', 'patch', 'fix'],
-  lucidBlocksCrashFixAndTroubleshooting: ['crash', 'vulkan', 'troubleshooting', 'full screen', 'controls', 'gameplay'],
+  download: ['download', 'install', 'steam', 'itch', 'pc'],
+  beginnerGuide: ['guide', 'beginner', 'starter', 'tips', 'descent'],
+  controls: ['controls', 'keyboard', 'mouse', 'gamepad', 'input'],
+  firstKiln: ['kiln', 'crafting', 'forge', 'first', 'progression'],
+  nightmareModeGuide: ['nightmare', 'hard', 'mode', 'difficulty', 'challenge'],
+  walkthrough: ['walkthrough', 'playthrough', 'chapter', 'level', 'progression'],
+  endings: ['ending', 'endings', 'finale', 'outcome', 'story'],
+  grapplingHookGuide: ['grappling', 'hook', 'movement', 'rappel', 'climb'],
+  centipede: ['centipede', 'boss', 'fight', 'enemy', 'combat'],
+  blackScreenFix: ['black screen', 'crash', 'fix', 'bug', 'troubleshoot'],
+  steamRelease: ['steam', 'release', 'launch', 'update', 'announcement'],
+  playOnline: ['online', 'multiplayer', 'co-op', 'play', 'together'],
+  gameModes: ['game modes', 'mode', 'normal', 'nightmare', 'endless'],
+  patchNotes: ['patch', 'update', 'notes', 'changelog', 'fix'],
+  speedrun: ['speedrun', 'any%', 'glitch', 'route', 'time'],
+  storyExplained: ['story', 'lore', 'explained', 'narrative', 'plot'],
 }
 
-const FILLER_WORDS = ['lucid', 'blocks', '2026', '2025', 'complete', 'the', 'and', 'for', 'how', 'with', 'our', 'this', 'your', 'all', 'from', 'learn', 'master']
+const FILLER_WORDS = ['idols', 'ash', '2026', '2025', 'complete', 'the', 'and', 'for', 'how', 'with', 'our', 'this', 'your', 'all', 'from', 'learn', 'master']
 
 function normalize(text: string): string {
   return text
@@ -77,9 +76,9 @@ function matchScore(queryText: string, article: ArticleWithType, extraKeywords?:
 
   let score = 0
 
-  // Exact phrase match in title (stripped of "Lucid Blocks")
-  const strippedQuery = normalizedQuery.replace(/lucid blocks?\s*/g, '').trim()
-  const strippedTitle = normalizedTitle.replace(/lucid blocks?\s*/g, '').trim()
+  // Exact phrase match in title (stripped of "Idols of Ash")
+  const strippedQuery = normalizedQuery.replace(/idols\s+of\s+ash\s*/g, '').trim()
+  const strippedTitle = normalizedTitle.replace(/idols\s+of\s+ash\s*/g, '').trim()
   if (strippedQuery.length > 3 && strippedTitle.includes(strippedQuery)) {
     score += 100
   }
